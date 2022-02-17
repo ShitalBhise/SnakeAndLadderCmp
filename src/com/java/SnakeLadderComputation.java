@@ -7,4 +7,5 @@ public class SnakeLadderComputation {
 	public static void main(String[] args) {
 
 	}
+
 }
