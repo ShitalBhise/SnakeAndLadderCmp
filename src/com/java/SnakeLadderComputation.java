@@ -28,7 +28,9 @@ public class SnakeLadderComputation {
 			position += diceRoll;
 		}
 		// Snak
-		else if (option == SNAKE) {
+		else if (option == SNAKE)
+
+		{
 			position -= diceRoll;
 		} else {
 			position = position;
@@ -39,12 +41,14 @@ public class SnakeLadderComputation {
 	}
 
 	public static void main(String[] args) {
+		int diceCount = 0;
 		while (position < 100) {
 			int diceRoll = RollDice();
 			System.out.println("diceRoll= " + RollDice());
+			diceCount++;
 			optionCheck(diceRoll);
 			System.out.println("position = " + position);
 		}
+		System.out.println("diceCount = " + diceCount);
 	}
-
 }
