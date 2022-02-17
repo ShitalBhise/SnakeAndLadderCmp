@@ -29,14 +29,18 @@ public class SnakeLadderComputation {
 		} else {
 			position = position;
 		}
+		if (position < 0) {
+			position = 0;
+		}
 	}
 
 	public static void main(String[] args) {
-		int diceRoll = RollDice();
-		System.out.println("diceRoll= " + RollDice());
-		optionCheck(diceRoll);
-		System.out.println("position = " + position);
-
+		while (position < 100) {
+			int diceRoll = RollDice();
+			System.out.println("diceRoll= " + RollDice());
+			optionCheck(diceRoll);
+			System.out.println("position = " + position);
+		}
 	}
 
 }
