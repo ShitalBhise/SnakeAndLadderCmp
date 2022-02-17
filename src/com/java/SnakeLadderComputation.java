@@ -18,6 +18,10 @@ public class SnakeLadderComputation {
 	public static void optionCheck(int diceRoll) {
 		Random random = new Random();
 		int option = random.nextInt(3);
+		// ForChecking winning position
+		if ((option == LADDER) && (position + diceRoll <= 100)) {
+			position += diceRoll;
+		}
 
 		// Ladder
 		if (option == LADDER) {
